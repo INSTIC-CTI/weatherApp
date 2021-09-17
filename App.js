@@ -2,6 +2,10 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
+
+const weatherApi = "https://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=d38e611926571bf12311100c0a48dba1"
+
+
 export default function App() {
   return (
     <View style={styles.container}>
