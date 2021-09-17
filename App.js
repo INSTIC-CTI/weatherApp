@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Text, View, StyleSheet } from "react-native";
+import  {config}  from "./config"
 
-const weatherApi =
-  "https://api.openweathermap.org/data/2.5/weather?q=Lyon&APPID=d38e611926571bf12311100c0a48dba1";
+const weatherApi = config.API
 
 export default class App extends Component {
   state = {
@@ -26,7 +26,7 @@ export default class App extends Component {
       return (
         <View style={styles.container}>
           <Text>{this.state.data.name}</Text>
-          <Text>{this.state.data.main.temp - 273,15}</Text>
+          <Text>{(this.state.data.main.temp - 273.15)}</Text>
           <Text>{this.state.data.weather[0].main}</Text>
           <Text>{this.state.data.weather[0].description}</Text>
         </View>
@@ -44,7 +44,7 @@ export default class App extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
-  }
-})
+    justifyContent: "center",
+    alignItems: "center",
+  },
+});
