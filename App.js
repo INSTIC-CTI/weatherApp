@@ -26,7 +26,7 @@ export default class App extends Component {
       return (
         <View style={styles.container}>
           <Text>{this.state.data.name}</Text>
-          <Text>{this.state.data.main.temp}</Text>
+          <Text>{this.state.data.main.temp - 273,15}</Text>
           <Text>{this.state.data.weather[0].main}</Text>
           <Text>{this.state.data.weather[0].description}</Text>
         </View>
